@@ -1,6 +1,6 @@
 import express from 'express';
 import "express-async-errors"; 
-import { Response } from 'express';
+import { Request, Response } from 'express';
 import dotenv from 'dotenv';
 import dbconnection from './configs/db';
 import routes from './routes/index.route';
@@ -16,7 +16,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(helmet())
 
-app.get("/", (res: Response) => {
+app.get("/", (req:Request, res: Response) => {
   res.send("Express + TypeScript Server");
 });
 app.use("/api", routes);
