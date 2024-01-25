@@ -1,0 +1,16 @@
+{
+    "image": "mcr.microsoft.com/devcontainers/typescript-node:20",
+    "customizations": {
+      "vscode": {
+        "extensions": [
+          "dbaeumer.vscode-eslint",
+          "ms-vscode.vscode-typescript-tslint-plugin",
+          "helixquar.randomeverything",
+          "esbenp.prettier-vscode"
+        ]
+      }
+    },
+    "forwardPorts": [3001,27017],
+    "runArgs": ["--env-file",".env"],
+    "postCreateCommand": "bash scripts/startup.sh"
+}
