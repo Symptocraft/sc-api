@@ -1,7 +1,7 @@
 import { Router } from "express";
+import { ObjectId } from "mongodb";
 import { CreateUser, DeleteUser, GetUserById, GetUsers, UpdateUser } from "../services/users";
 import { User } from "../types/user.types";
-import { ObjectId } from "mongodb";
 
 
 const UserRoutes = Router();

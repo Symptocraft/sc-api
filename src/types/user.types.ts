@@ -1,5 +1,3 @@
-import { ObjectId } from "mongodb";
-
 type User = {
     firstName: string,
     lastName: string,
